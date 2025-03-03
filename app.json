@@ -1503,6 +1503,103 @@
       },
       "platform": "yandexmini_2",
       "id": "yandex-station-mini-2"
+    },
+    {
+      "class": "speaker",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "cloud",
+        "lan"
+      ],
+      "images": {
+        "small": "/drivers/yandex-station-quinglong/assets/images/small.jpg",
+        "large": "/drivers/yandex-station-quinglong/assets/images/large.jpg"
+      },
+      "capabilities": [
+        "speaker_playing",
+        "speaker_next",
+        "speaker_prev",
+        "speaker_shuffle",
+        "speaker_repeat",
+        "speaker_artist",
+        "speaker_album",
+        "speaker_track",
+        "speaker_duration",
+        "speaker_position",
+        "volume_set",
+        "media_rewind",
+        "media_lyrics",
+        "media_like",
+        "media_dislike"
+      ],
+      "capabilitiesOptions": {
+        "volume_set": {
+          "title": {
+            "en": "Volume",
+            "ru": "Громкость"
+          },
+          "step": 0.1
+        },
+        "media_rewind": {
+          "min": 0,
+          "max": 100,
+          "step": 1
+        }
+      },
+      "pair": [
+        {
+          "id": "starting",
+          "template": "loading"
+        },
+        {
+          "id": "login_qr",
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Settings",
+            "ru": "Настройки"
+          },
+          "children": [
+            {
+              "id": "image_quality",
+              "type": "number",
+              "label": {
+                "en": "Image Quality",
+                "ru": "Качество изображения"
+              },
+              "units": "px",
+              "min": 30,
+              "max": 1000,
+              "value": 1000
+            }
+          ]
+        }
+      ],
+      "name": {
+        "en": "Xiaomi Display",
+        "ru": "Умный дисплей Xiaomi"
+      },
+      "platform": "quinglong",
+      "id": "yandex-station-quinglong"
     }
   ],
   "capabilities": {

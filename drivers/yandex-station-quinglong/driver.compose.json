@@ -1,0 +1,8 @@
+{
+    "name": {
+        "en": "Xiaomi Display",
+        "ru": "Умный дисплей Xiaomi"
+    },
+    "platform": "quinglong",
+    "$extends": ["speaker_base", "speaker_capabilities", "speaker_local_settings"]
+}

@@ -1,0 +1,6 @@
+<script type="application/javascript">
+    Homey.setTitle("Авторизация");
+
+    Homey.emit("login_start").then(url => Homey.popup(url));
+    Homey.on("login_end", () => Homey.nextView());
+</script>
